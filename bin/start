@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/local/adbyby/bin/adbyby &> /tmp/log/adbyby.log &
+/usr/local/adbyby/bin/monitor_adbyby &

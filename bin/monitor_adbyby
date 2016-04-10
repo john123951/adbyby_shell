@@ -1,0 +1,16 @@
+#! /bin/sh
+
+dodo()
+{
+    while true;do
+      cc=`ps -ef|grep ^.*bin/adbyby$ -E` 
+      if [ ! "$cc" ];then
+        /usr/local/adbyby/bin/adbyby &
+	echo $(date +"%Y/%m/%d %H:%M:%S") restart  >> /usr/local/adbyby/log/log.log
+      fi
+      sleep 10
+    done
+}
+
+dodo &
+

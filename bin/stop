@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ps |grep ^.*adbyby$ -E|awk '{print $1}'|xargs kill -9
+killall monitor_while.sh;
